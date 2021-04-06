@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table width="1000" cellpadding="2" border="1" cellspacing="0">
+    <tr>
+        <td>编号</td>
+        <td>名称</td>
+        <td>密码</td>
+        <td>邮箱</td>
+        <td>生日</td>
+    </tr>
+    <tr th:each="u:${users}">
+        <td th:text="${u.id}"></td>
+        <td th:text="${u.name}"></td>
+        <td th:text="${u.password}"></td>
+        <td th:text="${u.eamil}"></td>
+        <td th:text="${u.birthday}"></td>
+    </tr>
+</table>
+</body>
+</html>
